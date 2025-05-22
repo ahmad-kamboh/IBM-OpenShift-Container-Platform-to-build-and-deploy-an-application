@@ -1,0 +1,19 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  name: sample-app-build
+spec:
+  runPolicy: Serial
+  source:
+    type: Dockerfile
+    dockerfile: |
+      FROM registry.redhat.io/ubi8/nodejs-14
+      WORKDIR /opt/app-root/src
+      COPY . .
+      CMD ["npm", "start"]
+  strategy:
+    type: Docker
+  output:
+    to:
+      kind: ImageStreamTag
+      name: sample-app:latest
