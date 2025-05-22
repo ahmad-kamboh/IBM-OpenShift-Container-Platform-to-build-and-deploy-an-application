@@ -1,0 +1,28 @@
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  name: sample-app
+spec:
+  replicas: 1
+  selector:
+    app: sample-app
+  template:
+    metadata:
+      labels:
+        app: sample-app
+    spec:
+      containers:
+        - name: sample-app
+          image: image-registry.openshift-image-registry.svc:5000/$(PROJECT)/sample-app:latest
+          ports:
+            - containerPort: 8080
+  triggers:
+    - type: ConfigChange
+    - type: ImageChange
+      imageChangeParams:
+        automatic: true
+        containerNames:
+          - sample-app
+        from:
+          kind: ImageStreamTag
+          name: sample-app:latest
