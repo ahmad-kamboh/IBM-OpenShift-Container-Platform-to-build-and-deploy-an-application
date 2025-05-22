@@ -4,6 +4,7 @@
 This project demonstrates how to get started with Red Hat OpenShift using both the Web Console and CLI (`oc` tool). You'll learn how to deploy a containerized application, expose it via Routes, and manage it effectively using OpenShift's powerful platform.
 
 ---
+![WhatsApp Image 2025-05-22 at 03 19 13_44cc640e](https://github.com/user-attachments/assets/7366e93f-059d-4ae0-a071-a4c2930b05e4)
 
 ## 📚 Concepts & Techniques Covered
 
@@ -24,6 +25,7 @@ This project demonstrates how to get started with Red Hat OpenShift using both t
 - Container Image to deploy (e.g., `quay.io/redhattraining/hello-openshift`)
 
 ---
+![WhatsApp Image 2025-05-22 at 03 19 14_2e5c05b0](https://github.com/user-attachments/assets/abeed311-1200-46ca-80f4-84f6c59a5cd7)
 
 ## 🔑 Login to OpenShift Cluster
 
